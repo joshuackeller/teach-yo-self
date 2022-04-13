@@ -14,7 +14,7 @@ const DogsSinglePage = ({ dogName }) => {
           {" "}
           <div>Name: {dog?.Name}</div>
           <div>Breed: {dog?.Breed}</div>
-          <div>Is Alive? {dog?.IsLiving ? "True": "False"</div>
+          <div>Is Alive? {dog?.IsLiving ? "True" : "False"}</div>
           <img src={dog?.Image} width={400} alt="doggy dog" />
         </>
       ) : (
