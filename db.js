@@ -1,13 +1,12 @@
+// db.js
 import AWS from "aws-sdk";
 
-// Update AWS config
 AWS.config.update({
-  accessKeyId: , // Do NOT HARD-CODE your secret credentials here
-  secretAccessKey: , // Do NOT HARD-CODE your secret credentials here
-  region: "eu-central-1",
+  accessKeyId: process.env.NEXT_PUBLIC_DB_ACCESS_KEY_ID,
+  secretAccessKey: process.env.NEXT_PUBLIC_DB_SECRET_ACCESS_KEY,
+  region: "us-east-2",
 });
 
-// Create DynamoDB service object
 const db = new AWS.DynamoDB.DocumentClient({ apiVersion: "latest" });
 
 export default db;
